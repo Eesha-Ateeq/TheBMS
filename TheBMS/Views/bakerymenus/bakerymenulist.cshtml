@@ -1,0 +1,11 @@
+﻿@model IEnumerable<TheBMS.Models.bakerymenu>
+
+@{
+    ViewData["Title"] = "Bakery Menu List";
+}
+
+<h1>Bakery Menu List</h1>
+@foreach (var item in Model) {
+    <h3>@item.Title</h3>
+    <image src="@item.URL"/>
+}
