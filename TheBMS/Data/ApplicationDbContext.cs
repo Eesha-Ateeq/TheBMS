@@ -14,5 +14,6 @@ namespace TheBMS.Data
         {
         }
         public DbSet<TheBMS.Models.bakerymenu> bakerymenu { get; set; }
+        public DbSet<TheBMS.Models.Baker> Baker { get; set; }
     }
 }

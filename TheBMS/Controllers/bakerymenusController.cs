@@ -69,7 +69,7 @@ namespace TheBMS.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Create([Bind("Id,Title,URL")] bakerymenu bakerymenu)
+        public async Task<IActionResult> Create([Bind("Id,Title,URL,Price")] bakerymenu bakerymenu)
         {
             if (ModelState.IsValid)
             {
@@ -103,7 +103,7 @@ namespace TheBMS.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,URL")] bakerymenu bakerymenu)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,URL.Price")] bakerymenu bakerymenu)
         {
             if (id != bakerymenu.Id)
             {
