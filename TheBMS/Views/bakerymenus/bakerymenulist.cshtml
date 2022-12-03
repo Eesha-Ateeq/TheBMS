@@ -5,7 +5,19 @@
 }
 
 <h1>Bakery Menu List</h1>
-@foreach (var item in Model) {
-    <h3>@item.Title</h3>
-    <image src="@item.URL"/>
-}
+<div class="text-center">
+    <h1 class="display-4">TheBakeMakeShop</h1>
+    
+</div>
+<div class="row">
+    @foreach (var bakerymenu in Model)
+    {
+        <div id="Container" class="col-lg-3 col-md-4 col-sm-1">
+            <img id="Image" style="width: 100%; height: 100%;" src="@bakerymenu.URL" alt="@bakerymenu.Title" />
+            <span id="Title">@bakerymenu.Title</span>
+            <span id="Price">Rs. Coming Soon</span>
+            <span id="Quantity"><input id="quantityInput" type="number" name="Quantity" value="" placeholder="0" /></span>
+            <span id="CartButton"><button id="btn"><span class="fa fa-shopping-cart"></span>Add to Cart</button></span>
+        </div>
+    }
+</div>
